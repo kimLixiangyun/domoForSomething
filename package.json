@@ -1,0 +1,22 @@
+{
+  "name": "domoforsomething",
+  "version": "1.0.0",
+  "description": "create to show  construct of Distributed project",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimLixiangyun/domoforsomething.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimLixiangyun/domoforsomething/issues"
+  },
+  "homepage": "https://github.com/kimLixiangyun/domoforsomething#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
