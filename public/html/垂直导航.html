@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="font/font-awesome-4.5.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<ul id="accordion" class="accordion">
+    <li id="click1" class="isLi">
+        <div class="link" id="link1"><i class="fa fa-paint-brush"></i>Diseño web<i class="fa fa-chevron-down"></i></div>
+        <ul class="submenu" id="sub1">
+            <li><a href="#">Photoshop</a></li>
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">Maquetacion web</a></li>
+        </ul>
+    </li>
+    <li id="click2" class="isLi">
+        <div class="link" id="link2"><i class="fa fa-code"></i>Desarrollo front-end<i class="fa fa-chevron-down"></i></div>
+        <ul class="submenu" id="sub2">
+            <li><a href="#">Javascript</a></li>
+            <li><a href="#">jQuery</a></li>
+            <li><a href="#">Frameworks javascript</a></li>
+        </ul>
+    </li>
+    <li id="click3" class="isLi">
+        <div class="link" id="link3"><i class="fa fa-mobile"></i>Diseño responsive<i class="fa fa-chevron-down"></i></div>
+        <ul class="submenu" id="sub3">
+            <li><a href="#">Tablets</a></li>
+            <li><a href="#">Dispositivos mobiles</a></li>
+            <li><a href="#">Medios de escritorio</a></li>
+            <li><a href="#">Otros dispositivos</a></li>
+        </ul>
+    </li>
+    <li id="click4" class="isLi">
+        <div class="link"  id="link4"><i class="fa fa-globe"></i>Posicionamiento web<i class="fa fa-chevron-down"></i></div>
+        <ul class="submenu" id="sub4">
+            <li><a href="#">Google</a></li>
+            <li><a href="#">Bing</a></li>
+            <li><a href="#">Yahoo</a></li>
+            <li><a href="#">Otros buscadores</a></li>
+        </ul>
+    </li>
+</ul>
+
+<script type="text/javascript">var accordion = document.getElementById('accordion');
+var lis = document.getElementsByClassName('isLi');
+var links = document.getElementsByClassName('link');
+
+accordion.addEventListener('click', function(e) {
+	var event = e || window.event;
+	var target = event.target || event.srcElement;
+	try {
+		var key = target.className.indexOf('active');
+		var iEle = target.getElementsByTagName('i')[1];
+		iEle.className = 'fa fa-chevron-down';
+
+		for(var i = 0, len = lis.length; i < len; i++) {
+			lis[i].style.height = '47px';
+			links[i].className = 'link';
+		}
+		if(key < 0) {
+			target.parentElement.style.height = 'auto';
+			target.className += ' active';
+			iEle.className += ' rotateTo';
+			key = false;
+		} else {
+			target.parentElement.style.height = '47px';
+			target.className = 'link';
+			iEle.className += ' rotateBack';
+			key = true;
+		}
+	} catch(e) {
+
+	}
+}, false)
+</script>
+
+</body>
+</html>
