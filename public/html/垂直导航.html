@@ -48,6 +48,7 @@
 <script type="text/javascript">var accordion = document.getElementById('accordion');
 var lis = document.getElementsByClassName('isLi');
 var links = document.getElementsByClassName('link');
+var downjt=document.getElementsByClassName('fa-chevron-down');
 
 accordion.addEventListener('click', function(e) {
 	var event = e || window.event;
@@ -60,6 +61,7 @@ accordion.addEventListener('click', function(e) {
 		for(var i = 0, len = lis.length; i < len; i++) {
 			lis[i].style.height = '47px';
 			links[i].className = 'link';
+			downjt[i].className = 'fa fa-chevron-down';
 		}
 		if(key < 0) {
 			target.parentElement.style.height = 'auto';
