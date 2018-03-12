@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.content {
+				width: 640px;
+				margin: 150px auto;
+				text-align: center;
+			}
+			
+			input {
+				border: 0;
+				padding: 0;
+			}
+			
+			.s_ipt_wr {
+				border: 1px solid #b6b6b6;
+				border-color: #7b7b7b #b6b6b6 #b6b6b6 #7b7b7b;
+				background: #fff;
+				display: inline-block;
+				vertical-align: top;
+				width: 539px;
+				height: 34px;
+				margin-right: 0;
+				border-right-width: 0;
+				border-color: #b8b8b8 transparent #ccc #b8b8b8;
+				overflow: hidden;
+			}
+			
+			#kw {
+				position: relative;
+				width: 500px;
+			}
+			
+			.s_ipt {
+				width: 526px;
+				height: 22px;
+				font: 16px/18px arial;
+				line-height: 22px;
+				margin: 6px 0 0 7px;
+				padding: 0;
+				background: transparent;
+				border: 0;
+				outline: 0;
+				-webkit-appearance: none;
+			}
+			
+			input {
+				text-rendering: auto;
+				color: initial;
+				letter-spacing: normal;
+				word-spacing: normal;
+				text-transform: none;
+				text-indent: 0px;
+				text-shadow: none;
+				display: inline-block;
+				text-align: start;
+				margin: 0em;
+				font: 400 13.3333px Arial;
+			}
+			
+			a {
+				color: #00c;
+			}
+			
+			#su.bg {
+				background-image: none;
+			}
+			
+			.s_btn {
+				width: 100px;
+				height: 36px;
+				color: #fff;
+				font-size: 15px;
+				letter-spacing: 1px;
+				background: #3385ff;
+				border-bottom: 1px solid #2d78f4;
+				outline: medium;
+				-webkit-appearance: none;
+				-webkit-border-radius: 0;
+				cursor: pointer;
+				text-align: center;
+			}
+			
+			.s_btn_wr {
+				margin-left: -5px;
+			}
+			
+			.bg {
+				background-image: url(http://s1.bdstatic.com/r/www/cache/static/global/img/icons_5859e57.png);
+				background-repeat: no-repeat;
+				background-image: url(http://s1.bdstatic.com/r/www/cache/static/global/img/icons_d5b04cc.gif);
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="content">
+			<div><img src="//www.baidu.com/img/bd_logo1.png" alt="" width="270" height="129" /></div>
+			<div>
+				<span class="bg s_ipt_wr">
+				<input id="kw" name="wd" class="s_ipt" value="" maxlength="255" autocomplete="off">
+				<a href="javascript:;" id="quickdelete" title="清空" class="quickdelete" style="top: 0px; right: 0px; display: none;"></a>
+				</span>
+				<span class="bg s_btn_wr">
+					<input type="submit" id="su" value="百度一下" class="bg s_btn">
+				</span>
+			</div>
+			<div></div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var kw=document.getElementById('kw');
+		kw.onkeyup=function(){
+			var val=this.value;
+			var sc=document.createElement('script');
+//			sc.src="https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+val+"&json=1&cb=xiaolong";
+			sc.src="https://www.baidu.com/su?wd="+val+"&cb="+val;
+			document.body.appendChild(sc);
+		}
+		
+		function showData(json){
+			json.s.forEach(function(el){
+				
+			})
+		}
+		
+	</script>
+</html>
